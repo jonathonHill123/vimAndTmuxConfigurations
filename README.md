@@ -1,3 +1,6 @@
 # vimAndTmuxConfigurations
 
-Now using neovim https://github.com/neovim/neovim & auto generated 'vimrc' from http://vim-bootstrap.com/ 
+setup vim:
+symlinks:
+ln -s ~/.vim /path/to/this/git/repo/.vim
+ln -s ~/.vimrc /path/to/this/git/repo/.vimrc
