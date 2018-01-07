@@ -14,7 +14,6 @@ filetype plugin indent on
 set backspace=indent,eol,start
 " }}}
 
-
 " Colours {{{
 syntax enable	" enable syntax processing
 set background=dark
@@ -59,15 +58,6 @@ inoremap jk <esc>
 " toggle gui undo
 nnoremap <leader>u :GundoToggle<CR>
 
-" open ag.vim -> command line tool to search source code in a project
-nnoremap <leader>a :Ag
-" }}}
-
-" crtlP {{{
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 " }}}
 
 " Tmux {{{
