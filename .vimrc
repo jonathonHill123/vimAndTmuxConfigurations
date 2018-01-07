@@ -1,6 +1,19 @@
-" Plugin manager {{{
-call pathogen#infect()
+" Vundle (Required for YCM) {{{
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'sjl/badwolf'
+call vundle#end()
+filetype plugin indent on
 " }}}
+
+" Backspace {{{
+set backspace=indent,eol,start
+" }}}
+
 
 " Colours {{{
 syntax enable	" enable syntax processing
@@ -75,4 +88,9 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+" }}}
+
+" YouCompleteMe {{{
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:enable_ycm_at_startup = 1
 " }}}
