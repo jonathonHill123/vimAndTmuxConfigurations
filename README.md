@@ -1,4 +1,4 @@
-# setup symlinks to necessary files
+# setup symlinks
 
 vim:
 
@@ -23,4 +23,5 @@ brew install cmake
 cd ~/.vim/bundle/YouCompleteMe && ./install.py
 
 # Guide that gave me the backbone of my vimrc
+
 https://dougblack.io/words/a-good-vimrc.html
