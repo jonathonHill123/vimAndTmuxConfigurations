@@ -1,6 +1,4 @@
-# vimAndTmuxConfigurations
-
-setup symlinks to necessary files
+# setup symlinks to necessary files
 
 vim:
 
@@ -14,14 +12,15 @@ tmux:
 
 ln -s ~/.tmux.conf /path/to/this/git/repo/.tmux.conf
 
-Make sure necessary plugins are installed
+# Make sure necessary plugins are installed
 
 vim +PluginInstall +qall
 
-Build ycm
+# Build ycm
 
 brew install cmake
+
 cd ~/.vim/bundle/YouCompleteMe && ./install.py
 
-resources
+# Guide that gave me the backbone of my vimrc
 https://dougblack.io/words/a-good-vimrc.html
