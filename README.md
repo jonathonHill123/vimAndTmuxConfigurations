@@ -1,24 +1,25 @@
 # setup symlinks
 
-vim:
+ln -s /path/to/this/git/repo/.vim ~/.vim
 
-ln -s ~/.vim /path/to/this/git/repo/.vim
-
-ln -s ~/.vimrc /path/to/this/git/repo/.vimrc
+ln -s /path/to/this/git/repo/.vimrc ~/.vimrc
 
 tmux:
 
-ln -s ~/.tmux.conf /path/to/this/git/repo/.tmux.conf
+ln -s /path/to/this/git/repo/.tmux.conf ~/.tmux.conf
 
 # Make sure necessary plugins are installed
 
+cd ~/.vim/bundle
+rm -rf Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim
 vim +PluginInstall +qall
 
 # Build ycm
 
 brew install cmake
 
-cd ~/.vim/bundle/YouCompleteMe && ./install.py
+cd ~/.vim/bundle/YouCompleteMe && ./install.py && git submodule update --init --recursive
 
 # Guide that gave me the backbone of my vimrc
 
